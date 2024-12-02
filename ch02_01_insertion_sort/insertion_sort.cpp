@@ -8,7 +8,8 @@
 //  7        i = i - 1
 //  8    A[i+1] = key
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int insertion_sort(int A[], int n){
 	int key, i;
@@ -23,10 +24,10 @@ int insertion_sort(int A[], int n){
 		A[i+1] = key;
 	}
 	for (int j = 0; j < n; j++){
-		printf("%d\t", A[j]);
+		cout << A[j] << '\t';
 	}
 	
-	printf("\n\n");
+	cout << '\n' << '\n';
 	
 	// non-increasing order insertion sort algorithm
 	for (int j = 1; j < n; j++){
@@ -39,8 +40,9 @@ int insertion_sort(int A[], int n){
 		A[i+1] = key;
 	}
 	for (int j = 0; j < n; j++){
-		printf("%d\t", A[j]);
+		cout << A[j] << '\t';
 	}
+	
 	return 0;
 }
 
@@ -48,6 +50,5 @@ int main(void)
 {
 	int A[6] = {31, 41, 59, 26, 41, 58};
 	insertion_sort(A, 6);
-
 	return 0;
 }
